@@ -1,24 +1,24 @@
 ---
 # try also 'default' to start simple
-theme: seriph
+theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background-color: hsl(207, 55%,94%);
 # apply any windi css classes to the current slide
-class: 'text-center'
+class: "text-center"
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # some information about the slides, markdown enabled
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
-  
+
   Learn more at [Sli.dev](https://sli.dev)
 ---
 
-# Welcome to Slidev
+# Wordpress Site for Obnatus
 
-Presentation slides for developers
+Obnatus is a one person startup accelerator and angel investing
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 p-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -28,294 +28,176 @@ Presentation slides for developers
 
 <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
   class="abs-br m-6 text-xl icon-btn opacity-50 !border-none !hover:text-white">
-  <carbon-logo-github />
+<carbon-logo-github />
 </a>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
----
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-  
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
 
 <style>
 h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
+  color: hsl(207,55%,14%)
 }
+p {
+  color: hsl(207,55%,34%)
+}
+
 </style>
 
+---
+
+# Purpose of site
+
+- Present basic info about company
+- Present the people – founder and other people involved
+- Present featured companies Obnatus has been involved with
+- Allow contact through email and form
+- Publish news article with blogging
 
 ---
 
-# Navigation
+# Site specs
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+<p></p>
 
-### Keyboard Shortcuts
+The site will have 5 pages that need to be custom designed. Two will be in a "dark theme" while the rest will be in a light theme. The news/blog pages should be in a slightly different light theme as well.
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+The company wants to appear: **modern**, **technology-oriented**, **trustworthy**, **clean**
 
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+## Pages
 
-
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Code
-
-Use code snippets and get the highlighting directly!
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
-```
+- **Front page:** Scrollable with several modules, including about us, contact, "what we do"
+- **Team:** Separate page to present people involved
+- **Companies:** Separate page to present companies involved
+- **Blog archive:** Archive page for blog posts aka news articles
+- **Blog page:** Template for any blog post
 
 ---
 
-# Components
+# Front page
 
-<div grid="~ cols-2 gap-4">
-<div>
+Use light theme
 
-You can use Vue components directly inside your slides.
+## Sections
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly use. And add your custom components are also super easy.
+- **Hero Image**: Large image with a text over it. Could be a carousel such as on [heydays.com](https://heydays.com) if there is a ready component for it.
+- **About us**: Paragraph, icons with text, new paragraph
+- **Product/What we do**: Paragraph, icons with text
+- **News**: Block with latest news articles from blog
+- **Contact**: Show address and email as well as normal contact form
 
-```html
-<Counter :count="10" />
-```
+---
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
+# Portfolio page
 
-Check out [the guides](https://sli.dev/custom/#components) for more.
+Use dark theme
 
+Should present a bunch of logos of companies. There are 3 types of companies listed.
+
+- **Invested**: Should have a logo and a short description
+- **Worked with**: Should have a logo and a short description
+- **Involved with**: Should have just a small logo
+
+Since the page is in "dark mode", the logos probably need to be adjusted so they have a light color.
+
+---
+
+# Team page
+
+Use dark theme
+
+There should be a main photo and description of the founder. See the .pptx slides for good example. Below it should be possible to add other people with a portrait and description. Just use any existing block for team/people here.
+
+---
+
+# News page
+
+Use light theme but not exact same as front page
+
+This page should just list all the blog articles.
+
+---
+
+# Blog post template
+
+Use light theme but not exact same as front page, same as "News page"
+
+Should have a featured image and title visible. Tags and date should be displayed as well. No special requirements as long as the design is consistent with the rest of the site.
+
+---
+
+# Other info page
+
+Use light theme
+
+We will need some simple pages that are just a bunch of text, such as privacy notice etc. These should just be a default page in Wordpress, but the font and colors should be the same as on the front page.
+
+---
+
+# Header
+
+Header should have logo to the left, two menu items on the left, and 3 menu items on the right.
+
+Ideally, the mobile menu should be full screen with two items first, then 3 items separated by some space.
+
+The menu items on the right, should be anchor links to sections on the front page, e.g. to "About us" (/#about-us)
+
+---
+
+# Footer
+
+Should use the main dark theme color as background. Will have some links to privacy page as well as company info and copyright. Will probably find something more to add after first draft.
+
+---
+
+# Colors
+
+## Main color
+
+<div style="display:flex;align-items:center">
+<div style="background-color: hsl(207,55%,34%);height:2rem;width:2rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div style="background-color: hsl(207,55%,54%);height:1.4rem;width:1.4rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div style="background-color: hsl(207,55%,44%);height:1.4rem;width:1.4rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div style="background-color: hsl(207,55%,34%);height:1.4rem;width:1.4rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div style="background-color: hsl(207,55%,24%);height:1.4rem;width:1.4rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div style="background-color: hsl(207,55%,14%);height:1.4rem;width:1.4rem;border-radius:50%;display:block;margin:0.25rem"></div>
 </div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
+<div class="flex">
+<div>hsl(207,55%,34%)</div>,
+<div>hsl(207,55%,54%)</div>,
+<div>hsl(207,55%,44%)</div>,
+<div>hsl(207,55%,34%)</div>,
+<div>hsl(207,55%,24%)</div>,
+<div>hsl(207,55%,14%)</div>,
 </div>
-</div>
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes are able to provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div 
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
+ 
+## Main text color
+ 
+<div class="flex items-center">
+<div style="background-color: hsl(207,55%,10%);height:2rem;width:2rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div>hsl(207,55%,14%)</div>
 </div>
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
+## Light background color
 
-<div 
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-  
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
+<div class="flex items-center">
+<div style="background-color: hsl(207,55%,98%);height:2rem;width:2rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div>hsl(207,55%,94%)</div>
 </div>
 
----
+## Accents
 
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-2 gap-4 pt-4 -mb-6">
-
-```mermaid {scale: 0.9}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
+<div class="flex items-center">
+<div style="background-color: #DD403A;height:2rem;width:2rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div>#DD403A</div>
+</div>
+<div class="flex items-center">
+<div style="background-color: #FDE12D;height:2rem;width:2rem;border-radius:50%;display:block;margin:0.25rem"></div>
+<div>#FDE12D</div>
 </div>
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
+Feel free to adjust the accents if they don't fit well
 
 ---
-layout: center
-class: text-center
----
 
-# Learn More
+# Fonts
 
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+- **Headers**: [Cantarell](https://fonts.google.com/specimen/Cantarell) regular
+- **Body**: [Noto Sans SC](https://fonts.google.com/specimen/Noto+Sans+SC) regular

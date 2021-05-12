@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&family=Noto+Sans+SC&display=swap");
+
+h1,
+h2,
+h3,
+h4 {
+  color: hsl(207, 55%, 34%);
+  font-family: "Cantarell", sans-serif;
+}
+body,
+p,
+li,
+ol {
+  color: hsl(207, 55%, 14%);
+  font-family: "Noto Sans SC", sans-serif;
+}
